@@ -1,0 +1,20 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+lint: |
+    yamllint .
+    ansible-lint
+    flake8
+platforms:
+  - name: docker-leap15
+    image: opensuse/leap
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    memory: 2048m
+    privileged: true
+provisioner:
+  name: ansible
+verifier:
+  name: testinfra

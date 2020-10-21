@@ -1,0 +1,13 @@
+---
+- name: Converge machines
+  hosts: all
+  roles:
+    - role: ansible-uyuni
+      uyuni_use_lvm: false
+      uyuni_cefs_setup: true
+      uyuni_cefs_setup_cronjob: true
+      uyuni_defs_setup: true
+      uyuni_defs_setup_cronjob: true
+      uyuni_channels:
+        - {"name": "centos7", "arch": "x86_64"}
+        - {"name": "centos7-updates", "arch": "x86_64"}
