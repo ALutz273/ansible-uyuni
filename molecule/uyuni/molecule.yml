@@ -8,7 +8,7 @@ lint: |
     ansible-lint
     flake8
 platforms:
-  - name: opensuse-leap15
+  - name: vm-leap15
     box: generic/opensuse15
     box_version: "3.0.22"
     cpus: 2
