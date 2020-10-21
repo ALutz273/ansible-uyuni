@@ -8,7 +8,7 @@ jobs:
 
   test:
     name: Molecule
-    runs-on: opensuse-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Update codebase
